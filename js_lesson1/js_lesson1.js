@@ -1,0 +1,51 @@
+// .push()
+let array = [1, 2, 3, 4, 5];
+array.push(45, 97, "hello");
+console.log(array);
+console.log(array.length);
+
+let war = array.push("Jo");
+console.log(war);
+console.log(array);
+
+// .pop()
+array.pop();
+console.log(array);
+
+//------------------------------------------
+
+// for
+
+// a) iterating over array
+let arr = [1, 2, 3, 4, 5];
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+// b) a certain number of times
+ for (let i = 1; i < arr.length; i++) {
+     console.log("Итерация" + arr[i]);
+ }
+
+ // c) сountdown
+for (let i = 10; i > 0; i--) {
+    console.log(i);
+}
+
+//------------------------------------------
+
+// for ..... of
+let rows = [1, 2, 3, 4, 5];
+let result = "";
+let character = "#"
+
+for (const row of rows){
+    result = result + "\n" + row;
+    console.log(result);
+}
+
+rows = [];
+for (let b = 0; b < 10; b++){
+    rows.push(character.repeat(b))
+}
+console.log(rows);
