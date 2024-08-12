@@ -49,3 +49,41 @@ for (let b = 0; b < 10; b++){
     rows.push(character.repeat(b))
 }
 console.log(rows);
+
+//-----------second half part-----------
+
+// TODO: use a different type of loop
+
+/*for (let i = 1; i <= count; i++) {
+    rows.push(padRow(i, count));*/
+
+
+if (true) {
+    console.log("Condition is true");
+} else if (5 < 10) {
+    console.log("5 is less than 10");
+} else {
+    console.log("This is the else block");
+}
+
+//---------------------------------------------
+
+
+while (done !== count) {
+    done++;
+    rows.push(padRow(done, count));
+    if (done !== count) {
+        continueLoop !== false;
+    }
+}
+
+rows.push(padRow(done, count));
+
+//--------------------------
+
+let done = 0;
+
+while (rows.length < count) {
+    done++;
+    rows.push(padRow(rows.length + 1, count));
+}
