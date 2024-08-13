@@ -1,4 +1,4 @@
-// .push()
+/*// .push()
 let array = [1, 2, 3, 4, 5];
 array.push(45, 97, "hello");
 console.log(array);
@@ -54,8 +54,8 @@ console.log(rows);
 
 // TODO: use a different type of loop
 
-/*for (let i = 1; i <= count; i++) {
-    rows.push(padRow(i, count));*/
+/!*for (let i = 1; i <= count; i++) {
+    rows.push(padRow(i, count));*!/
 
 
 if (true) {
@@ -86,4 +86,29 @@ let done = 0;
 while (rows.length < count) {
     done++;
     rows.push(padRow(rows.length + 1, count));
+}*/
+
+const character = "!";
+const count = 10;
+const rows = [];
+let inverted = false;
+
+function padRow(rowNumber, rowCount) {
+    return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
 }
+
+for (let i = 1; i <= count; i++) {
+    if (inverted) {
+        rows.unshift(padRow(i, count));
+    } else {
+        rows.push(padRow(i, count));
+    }
+}
+
+let result = ""
+
+for (const row of rows) {
+    result = result + "\n" + row;
+}
+
+console.log(result);
