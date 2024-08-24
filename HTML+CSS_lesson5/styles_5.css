@@ -2,25 +2,24 @@
     box-sizing: border-box;
 }
 body {
-    margin: 0;
     font-family: sans-serif;
+    margin: 0;
     background: #f5f6f7;
 }
-
 .header {
+    text-transform: uppercase;
+    text-align: center;
     background-color: #0a0a23;
     color: #fff;
-    border-bottom: 4px solid #fdb347;
-    text-align: center;
-    text-transform: uppercase;
     padding: 32px;
+    border-bottom: 4px solid #ffca2c;
 }
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1400px;
     justify-content: center;
     align-items: center;
+    max-width: 1400px;
     gap: 16px;
     margin: 0 auto;
     padding: 20px 10px;
@@ -32,8 +31,7 @@ body {
     object-fit: cover;
     border-radius: 10px;
 }
-
-.gallery:after{
+.gallery:after {
     content: "";
     width: 350px;
 }
